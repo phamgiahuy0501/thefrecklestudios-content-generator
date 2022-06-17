@@ -18,6 +18,8 @@ export const STYLE_CLASS_STRING = {
 }
 
 export const STRING = {
+    DOT: "•",
     MINUS: "&#8722;",
+    NBSP: "&nbsp;",
     PLUS: "&#43;"
 }

@@ -1,0 +1,99 @@
+$font-color: #686868;
+$header-color: #282828;
+
+.container {
+    display: flex;
+    flex-flow: column;
+
+    .header-container {
+        background-color: aqua;
+        height: 5rem;
+        margin: 0 10% 5rem 10%;
+    }
+
+    .content-container {
+        display: inherit;
+        flex-flow: row;
+        justify-content: center;
+
+        .section {
+            background-color: aqua;
+            margin: 0 2rem;
+            width: 40%;
+
+            .form-container {
+                display: flex;
+                flex-flow: column;
+                margin: 1rem 0 1rem 2rem;
+
+                input {
+                    border: 0;
+                    border-radius: 10px;
+                    font-size: 1rem;
+                    margin: 0 2rem 0.5rem 0;
+                    padding: 1rem 2rem;
+
+                    &:focus {
+                        outline: none;
+
+                        &::placeholder {
+                            color: transparent;
+                        }
+
+                    }
+                    &:last-child {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.wrap-customer-style {
+    .description-container {
+        margin-left: 2rem;
+        margin-top: 2rem;
+
+        .title-container {
+            display: flex;
+            margin-top: 1.5rem;
+            text-transform: uppercase;
+
+            h4 {
+                color: $header-color;
+                margin: 0 1rem;
+            }
+        }
+
+        .dropdown-controller {
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .animationHidden {
+            height: 0;
+            opacity: 0;
+            transition-timing-function: linear, step-end;
+            visibility: hidden;
+        }
+
+        .content-item {
+            color: $font-color;
+            font-size: 1rem;
+            margin: 0.5rem 1rem;
+            transition: opacity 0.5s linear, height 0.5s step-start;
+
+            span {
+                color: $header-color;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}

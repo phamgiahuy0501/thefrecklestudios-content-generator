@@ -3,8 +3,15 @@ import { HTML_TAG_STRING, STYLE_CLASS_STRING, STRING } from "../utils/string.js"
 export class ContentModel {
     constructor(content) {
         this.tag = HTML_TAG_STRING.DIV;
-        this.classList = [STYLE_CLASS_STRING.CONTENT_ITEM, STYLE_CLASS_STRING.ANIM_HIDDEN];
+        this.classList = [STYLE_CLASS_STRING.CONTENT_ITEM];
         this.content = content;
+    }
+}
+
+export class ContentAnimModel extends ContentModel {
+    constructor(content) {
+        super(content);
+        this.classList.push(STYLE_CLASS_STRING.ANIM_HIDDEN)
     }
 }
 
@@ -16,7 +23,7 @@ export class WrapStyleModel {
     }
 }
 
-export class DescriptionContainer {
+export class DescriptionContainerModel {
     constructor(content) {
         this.tag = HTML_TAG_STRING.DIV;
         this.classList = STYLE_CLASS_STRING.DES_CONTAINER;
@@ -24,7 +31,7 @@ export class DescriptionContainer {
     }
 }
 
-export class TitleDropdown {
+export class TitleDropdownModel {
     constructor(content) {
         this.tag = HTML_TAG_STRING.DIV;
         this.classList = [STYLE_CLASS_STRING.TITLE_CONTAINER, STYLE_CLASS_STRING.DROPDOWN_CONTROLLER];
@@ -32,7 +39,7 @@ export class TitleDropdown {
     }
 }
 
-export class IconContainer {
+export class IconContainerModel {
     constructor(content) {
         this.tag = HTML_TAG_STRING.DIV;
         this.classList = STYLE_CLASS_STRING.ICON_CONTAINER;
@@ -40,26 +47,33 @@ export class IconContainer {
     }
 }
 
-export class PlusIcon {
-    constructor(content) {
+export class PlusIconModel {
+    constructor() {
         this.tag = HTML_TAG_STRING.SPAN;
-        this.classList = STYLE_CLASS_STRING.ICON_CONTAINER;
+        this.classList = STYLE_CLASS_STRING.PLUS;
         this.content = STRING.PLUS;
     }
 }
 
-export class MinusIcon {
-    constructor(content) {
+export class MinusIconModel {
+    constructor() {
         this.tag = HTML_TAG_STRING.SPAN;
-        this.classList = [STYLE_CLASS_STRING.ICON_CONTAINER, STYLE_CLASS_STRING.ANIM_HIDDEN];
+        this.classList = [STYLE_CLASS_STRING.MINUS, STYLE_CLASS_STRING.HIDDEN];
         this.content = STRING.MINUS;
     }
 }
 
-export class header4 {
+export class Header4Model {
     constructor(content) {
         this.tag = HTML_TAG_STRING.HEADER_4;
-        this.classList = classList;
         this.content = content;
     }
 }
+
+export class InnerDotModel {
+    constructor() {
+        this.tag = HTML_TAG_STRING.SPAN;
+        this.content = STRING.DOT;
+    } 
+}
+
