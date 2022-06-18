@@ -20,7 +20,9 @@ $header-color: #282828;
             background-color: aqua;
             margin: 0 2rem;
             width: 40%;
+        }
 
+        .input-container {
             .form-container {
                 display: flex;
                 flex-flow: column;
@@ -41,59 +43,29 @@ $header-color: #282828;
                         }
 
                     }
-                    &:last-child {
-                        opacity: 0.5;
-                    }
                 }
             }
-        }
-    }
-}
 
+            .outer:last-child input:first-child {
+                opacity: 0.5;
+            }
 
-
-
-.wrap-customer-style {
-    .description-container {
-        margin-left: 2rem;
-        margin-top: 2rem;
-
-        .title-container {
-            display: flex;
-            margin-top: 1.5rem;
-            text-transform: uppercase;
-
-            h4 {
-                color: $header-color;
-                margin: 0 1rem;
+            .inner input:last-child {
+                opacity: 0.5;
             }
         }
 
-        .dropdown-controller {
+        .generate-button {
+            background-color: bisque;
+            border-radius: 10px;
             cursor: pointer;
+            height: fit-content;
+            margin-top: 1rem;
+            padding: 1rem;
         }
 
-        .hidden {
-            display: none !important;
-        }
-
-        .animationHidden {
-            height: 0;
-            opacity: 0;
-            transition-timing-function: linear, step-end;
-            visibility: hidden;
-        }
-
-        .content-item {
-            color: $font-color;
-            font-size: 1rem;
-            margin: 0.5rem 1rem;
-            transition: opacity 0.5s linear, height 0.5s step-start;
-
-            span {
-                color: $header-color;
-                margin-right: 0.5rem;
-            }
+        .generated-container {
+            @import './src/generated';
         }
     }
 }
