@@ -1,3 +1,41 @@
+body {
+  background-color: #87805E;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-container {
+  background-color: #EDDFB3;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  height: 4rem;
+  margin: 0 20% 10rem 20%;
+}
+
+.header-container .tab {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #B09B71;
+  cursor: pointer;
+  display: inherit;
+  font-size: 1.25rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.header-container .tab:hover {
+  background-color: #D8CCA3;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,12 +44,6 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-}
-
-.container .header-container {
-  background-color: aqua;
-  height: 5rem;
-  margin: 0 10% 5rem 10%;
 }
 
 .container .content-container {
@@ -26,9 +58,16 @@
 }
 
 .container .content-container .section {
-  background-color: aqua;
+  background-color: #B09B71;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   margin: 0 2rem;
   width: 40%;
+}
+
+.container .content-container .input-container {
+  padding: 2rem 0;
 }
 
 .container .content-container .input-container .form-container {
@@ -39,14 +78,16 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  margin: 1rem 0 1rem 2rem;
+  margin: 0.5rem 3rem 1rem 2rem;
 }
 
 .container .content-container .input-container .form-container input {
   border: 0;
   border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   font-size: 1rem;
-  margin: 0 2rem 0.5rem 0;
+  margin-bottom: 0.5rem;
   padding: 1rem 2rem;
 }
 
@@ -79,8 +120,10 @@
 }
 
 .container .content-container .generate-button {
-  background-color: bisque;
+  background-color: #EDDFB3;
   border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   cursor: pointer;
   height: -webkit-fit-content;
   height: -moz-fit-content;
