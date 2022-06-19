@@ -10,7 +10,19 @@ function copyClipboardHandle() {
     if (generatedObject.length == 0) {
         return;
     }
-    navigator.clipboard.writeText(generatedObject.html())
+    navigator.clipboard.writeText(generatedObject.html());
+    
+    const tooltipCopy = $(".tooltip.copy");
+    tooltipCopy.text("Copied!");
+    tooltipCopy.toggleClass("new-copy");
+}
+
+function onMouseOutHandle() {
+    const tooltipCopy = $(".tooltip.copy");
+    if (tooltipCopy.text() == "Copied!") {
+        tooltipCopy.text("Copy");
+        tooltipCopy.toggleClass("new-copy");
+    }
 }
 
 function clearInputHandle() {
