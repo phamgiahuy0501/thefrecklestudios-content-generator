@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- JQUERY 3.6.0 IMPORT -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- GOOGLE ICON 4.7.0 IMPORT -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- FONTAWESOME IMPORT -->
+    <script src="https://kit.fontawesome.com/4c21efa067.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -28,6 +28,9 @@
     <div class="container">
         <div class="content-container">
             <div class="input-container section">
+                <i class="icon fa-solid fa-arrow-rotate-right" onclick="clearInputHandle()">
+                    <div class="tooltip clear-all">Clear all</div>
+                </i>
                 <div class="form-container outer">
                     <input type="text" placeholder="Input content...">
                     <div class="form-container inner">
@@ -45,11 +48,14 @@
                 RUN
             </div>
             <div class="generated-container section">
-
+                <i class="icon fa-solid fa-clipboard" onclick="copyClipboardHandle()">
+                    <div class="tooltip copy">Copy</div>
+                </i>
             </div>
         </div>
     </div>
-    <script src="script.js" type="module"></script>
+    <script src="script-jq.js" type="module"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

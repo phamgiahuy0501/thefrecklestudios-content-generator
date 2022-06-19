@@ -2,7 +2,6 @@ $background-color: #87805E;
 $color-1: #B09B71;
 $color-2: #D8CCA3;
 $color-3: #EDDFB3;
-$font-color: #686868;
 $header-color: #282828;
 
 // SHADOW STYLE 
@@ -34,6 +33,7 @@ body {
         font-size: 1.25rem;
         justify-content: center;
         width: 100%;
+
         &:hover {
             background-color: $color-2;
         }
@@ -54,11 +54,69 @@ body {
             border-radius: 20px;
             box-shadow: $shadow-1;
             margin: 0 2rem;
+            position: relative;
             width: 40%;
+
+            .icon {
+                color: $color-2;
+                cursor: pointer;
+                font-size: 1.75rem;
+                position: absolute;
+
+                &:hover {
+                    opacity: 0.75;
+
+                    .tooltip {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                .tooltip {
+                    background-color: wheat;
+                    border-radius: 20px;
+                    bottom: 150%;
+                    color: $header-color;
+                    font-size: 0.75rem;
+                    letter-spacing: 2px;
+                    padding: 10px;
+                    position: inherit;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.5s;
+                    text-align: center;
+
+                    &::after {
+                        border-color: wheat transparent transparent transparent;
+                        border-style: solid;
+                        border-width: 5px;
+                        content: "";
+                        left: 50%;
+                        margin-left: -5px;
+                        position: inherit;
+                        top: 100%;
+                    }
+
+                }
+
+                .clear-all {
+                    width: 6rem;
+                    margin-left: -150%;
+                }
+
+                .copy {
+                    margin-left: -100%;
+                }
+            }
         }
 
         .input-container {
             padding: 2rem 0;
+
+            .icon {
+                left: 3rem;
+                top: -2.25rem;
+            }
 
             .form-container {
                 display: flex;
@@ -105,6 +163,11 @@ body {
 
         .generated-container {
             @import './src/generated';
+
+            .icon {
+                left: 3rem;
+                top: -2.25rem;
+            }
         }
     }
 }

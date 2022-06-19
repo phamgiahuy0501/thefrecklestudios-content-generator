@@ -1,44 +1,21 @@
-import { generate } from "./src/generator.js"
-import { STYLE_CLASS_STRING } from "./src/utils/string.js"
+let generatedClass = "";
+import("./src/utils/string.js")
+    .then((module) => module.STYLE_CLASS_STRING.WRAP_STYLE)
+    .then((result) => {
+        generatedClass = result;
+    });
 
-$(".generate-button").on("click", function () {
-    $(`.generated-container .${STYLE_CLASS_STRING.WRAP_STYLE}`).remove()
-
-    $(".generated-container").append(generate())
-});
-
-$(".input-container ").on("focus", "input", function () {
-    if ($(this).parent().hasClass("inner")) {
-        if ($(this).next().prop("tagName") == undefined) {
-            $(this).after("<input type=\"text\" placeholder=\"Input content...\">")
-        }
-    } else {
-        if ($(this).parent().next().prop("tagName") == undefined) {
-            $(this).parent().after("<div class=\"form-container outer\"><input type=\"text\" placeholder=\"Input content...\"><div class=\"form-container inner\"><input type=\"text\" placeholder=\"Input content...\"></div></div>")
-        }
+function copyClipboardHandle() {
+    const generatedObject = $(`.generated-container .${generatedClass}`);
+    if (generatedObject.length == 0) {
+        return;
     }
-});
+    navigator.clipboard.writeText(generatedObject.html())
+}
 
-$(".input-container").on("focusout", "input", function () {
-    if ($(this).parent().hasClass("inner")) {
-        if ($(this).val() == "") {
-            $(this).next().remove();
-        }
-    } else {
-        if ($(this).val() == "") {
-            $(this).parent().next().remove();
-        }
-    }
-});
+function clearInputHandle() {
+    $(".input-container .form-container").remove();
+    $(".input-container").append("<div class=\"form-container outer\"><input type=\"text\" placeholder=\"Input content...\"><div class=\"form-container inner\"><input type=\"text\" placeholder=\"Input content...\"></div></div><div class=\"form-container outer\"><input type=\"text\" placeholder=\"Input content...\"><div class=\"form-container inner\"><input type=\"text\" placeholder=\"Input content...\"></div></div>")
 
-// Animation
-$(".generated-container").on("click", ".wrap-customer-style .dropdown-controller", function () {
-    let plusObject = $(this).find(".plus")
-    let minusObject = $(this).find(".minus")
-    let content = $(this).next()
-
-    plusObject.toggleClass("hidden")
-    minusObject.toggleClass("hidden")
-    content.toggleClass("animationHidden")
-});
-// END Animation
+    $(`.generated-container .${generatedClass}`).remove();
+}
