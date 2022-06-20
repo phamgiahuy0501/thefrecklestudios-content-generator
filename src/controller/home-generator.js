@@ -1,5 +1,5 @@
-import { generate } from "./src/generator.js"
-import { STYLE_CLASS_STRING } from "./src/utils/string.js"
+import { generate } from "../../src/generator.js"
+import { STYLE_CLASS_STRING } from "../../src/utils/string.js"
 
 $(".generate-button").on("click", function () {
     $(`.generated-container .${STYLE_CLASS_STRING.WRAP_STYLE}`).remove()

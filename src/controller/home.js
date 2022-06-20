@@ -1,5 +1,23 @@
+// IMPORT PARTIALS HTM
+fetch("/views/partials/_header.htm")
+    .then(response => {
+        return response.text()
+    })
+    .then(data => {
+        $("header").append(data);
+    });
+
+fetch("/views/partials/_footer.htm")
+    .then(response => {
+        return response.text()
+    })
+    .then(data => {
+        $("footer").append(data);
+    });
+
+
 let generatedClass = "";
-import("./src/utils/string.js")
+import("../utils/string.js")
     .then((module) => module.STYLE_CLASS_STRING.WRAP_STYLE)
     .then((result) => {
         generatedClass = result;

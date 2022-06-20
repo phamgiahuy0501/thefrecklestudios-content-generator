@@ -3,7 +3,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.header-container {
+header .header-container {
   background-color: #EDDFB3;
   -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
           box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -18,7 +18,7 @@ body {
   margin: 0 20% 10rem 20%;
 }
 
-.header-container .tab {
+header .header-container .tab {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -32,8 +32,23 @@ body {
   width: 100%;
 }
 
-.header-container .tab:hover {
+header .header-container .tab:hover {
   background-color: #D8CCA3;
+}
+
+footer {
+  background-color: #EDDFB3;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem 0;
+  position: fixed;
+  width: 100%;
+}
+
+footer .footer-container {
+  color: #282828;
+  font-size: 0.75rem;
+  margin-left: 2rem;
 }
 
 .container {
@@ -71,8 +86,8 @@ body {
   color: #D8CCA3;
   cursor: pointer;
   font-size: 1.75rem;
-  position: absolute;
   left: 3rem;
+  position: absolute;
   top: -2.25rem;
 }
 
