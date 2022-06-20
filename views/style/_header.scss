@@ -1,23 +1,25 @@
 header {
     .header-container {
-        background-color: $color-3;
-        box-shadow: $shadow-1;
-        display: flex;
-        flex-flow: row;
-        height: 4rem;
-        margin: 0 20% 10rem 20%;
-    
-        .tab {
-            align-items: center;
-            border: 1px solid $color-1;
-            cursor: pointer;
-            display: inherit;
-            font-size: 1.25rem;
-            justify-content: center;
-            width: 100%;
-    
-            &:hover {
-                background-color: $color-2;
+        .nav-container {
+            background-color: $color-3;
+            box-shadow: $shadow-1;
+            display: flex;
+            flex-flow: row;
+            height: 4rem;
+            margin: 0 20% 10rem 20%;
+
+            .tab {
+                align-items: center;
+                border: 1px solid $color-1;
+                cursor: pointer;
+                display: inherit;
+                font-size: 1.25rem;
+                justify-content: center;
+                width: 100%;
+
+                &:hover {
+                    background-color: $color-2;
+                }
             }
         }
     }

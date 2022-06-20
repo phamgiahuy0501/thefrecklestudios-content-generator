@@ -17,8 +17,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@import './src/views/style/header';
-@import './src/views/style/footer';
+@import './views/style/header';
+@import './views/style/footer';
 
 .container {
     display: flex;
@@ -144,7 +144,7 @@ body {
         }
 
         .generated-container {
-            @import './src/views/style/generated';
+            @import './views/style/generated';
         }
     }
 }
