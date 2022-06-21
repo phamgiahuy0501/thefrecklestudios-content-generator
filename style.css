@@ -276,6 +276,7 @@ footer .footer-container {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  margin-bottom: 4rem;
 }
 
 .container.help .title {
