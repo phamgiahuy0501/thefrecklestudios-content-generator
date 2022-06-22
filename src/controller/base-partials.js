@@ -1,2 +1,2 @@
-$("header").load("../../views/partials/_header.htm");
-$("footer").load("../../views/partials/_footer.htm");
+$("header").load("../../views/partials/header.htm");
+$("footer").load("../../views/partials/footer.htm");
