@@ -22,15 +22,14 @@ $(".input-container ").on("focus", "input", function () {
 });
 
 $(".input-container").on("focusout", "input", function () {
-    if ($(this).parent().hasClass("inner")) {
-        if ($(this).val() == "") {
-            $(this).next().remove();
-        }
-    } else {
-        if ($(this).val() == "") {
-            $(this).parent().next().remove();
-        }
+    if ($(this).val() != "") {
+        return
     }
+    if ($(this).parent().hasClass("inner")) {
+        $(this).next().remove();
+        return;
+    }
+    $(this).parent().next().remove();
 });
 
 // GENERATED

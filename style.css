@@ -341,4 +341,10 @@ footer .footer-container {
 .container.help .list-guide-container .guide-item-container .content {
   margin: 1.5rem 0;
 }
+
+.container.about {
+  font-size: 2rem;
+  height: 100vh;
+  margin: 0 10%;
+}
 /*# sourceMappingURL=style.css.map */
