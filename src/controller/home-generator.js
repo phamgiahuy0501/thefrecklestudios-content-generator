@@ -29,6 +29,9 @@ $(".input-container").on("focusout", "input", function () {
         $(this).next().remove();
         return;
     }
+    if ($(".form-container.outer").length == 2) {
+        return;
+    }
     $(this).parent().next().remove();
 });
 
