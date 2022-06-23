@@ -1,10 +1,10 @@
 body {
-  background-color: #87805E;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FEE3EC;
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
 }
 
 header .header-container .nav-container {
-  background-color: #EDDFB3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,17 +12,13 @@ header .header-container .nav-container {
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
-  height: 4rem;
-  margin: 0 20% 10rem 20%;
+  margin: 1rem 1% 10rem 70%;
 }
 
 header .header-container .nav-container .tab {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #B09B71;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   cursor: pointer;
   display: inherit;
   font-size: 1.25rem;
@@ -30,29 +26,24 @@ header .header-container .nav-container .tab {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
 }
 
 header .header-container .nav-container .tab:hover {
-  background-color: #D8CCA3;
-}
-
-header .header-container .nav-container .current {
-  -webkit-box-shadow: unset;
-          box-shadow: unset;
-  font-weight: lighter;
+  opacity: 0.5;
+  text-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 footer {
-  background-color: #EDDFB3;
-  bottom: 0;
-  left: 0;
+  background-color: #F2789F;
   padding: 0.5rem 0;
-  position: fixed;
   width: 100%;
 }
 
 footer .footer-container {
   color: #282828;
+  color: white;
   font-size: 0.75rem;
   margin-left: 2rem;
 }
@@ -65,13 +56,14 @@ footer .footer-container {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  height: 100vh;
 }
 
 .container.home .title {
   font-size: 1.75rem;
-  letter-spacing: 2px;
   font-weight: lighter;
-  margin-bottom: 3.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 5.5rem;
   text-align: center;
 }
 
@@ -87,7 +79,7 @@ footer .footer-container {
 }
 
 .container.home .content-container .section {
-  background-color: #B09B71;
+  background-color: #F9C5D5;
   border-radius: 20px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
           box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -97,7 +89,7 @@ footer .footer-container {
 }
 
 .container.home .content-container .section .icon {
-  color: #D8CCA3;
+  color: #F999B7;
   cursor: pointer;
   font-size: 1.75rem;
   left: 3rem;
@@ -115,7 +107,7 @@ footer .footer-container {
 }
 
 .container.home .content-container .section .icon .tooltip {
-  background-color: wheat;
+  background-color: #F9C5D5;
   border-radius: 20px;
   bottom: 150%;
   color: #282828;
@@ -131,7 +123,7 @@ footer .footer-container {
 }
 
 .container.home .content-container .section .icon .tooltip::after {
-  border-color: wheat transparent transparent transparent;
+  border-color: #F9C5D5 transparent transparent transparent;
   border-style: solid;
   border-width: 5px;
   content: "";
@@ -209,7 +201,7 @@ footer .footer-container {
 }
 
 .container.home .content-container .generate-button {
-  background-color: #EDDFB3;
+  background-color: #F2789F;
   border-radius: 10px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
@@ -300,7 +292,7 @@ footer .footer-container {
 }
 
 .container.help .list-guide-container .guide-item-container {
-  background-color: #EDDFB3;
+  background-color: #F2789F;
   border-radius: 20px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
@@ -311,7 +303,7 @@ footer .footer-container {
 }
 
 .container.help .list-guide-container .guide-item-container .number {
-  background-color: #D8CCA3;
+  background-color: #F999B7;
   border-radius: 100px;
   font-size: 2.75rem;
   font-weight: 500;

@@ -1,7 +1,7 @@
-$background-color: #87805E;
-$color-1: #B09B71;
-$color-2: #D8CCA3;
-$color-3: #EDDFB3;
+$background-color: #FEE3EC;
+$color-1: #F9C5D5;
+$color-2: #F999B7;
+$color-3: #F2789F;
 $header-color: #282828;
 
 // SHADOW STYLE 
@@ -14,5 +14,6 @@ $shadow-2: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 
 
 body {
     background-color: $background-color;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
 }

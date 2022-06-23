@@ -11,30 +11,26 @@ header {
         // }
 
         .nav-container {
-            background-color: $color-3;
             display: flex;
             flex-flow: row;
-            height: 4rem;
-            margin: 0 20% 10rem 20%;
+            margin: 1rem 1% 10rem 70%;
             
             .tab {
                 align-items: center;
-                border: 1px solid $color-1;
-                box-shadow: $shadow-1;
                 cursor: pointer;
                 display: inherit;
                 font-size: 1.25rem;
                 justify-content: center;
                 width: 100%;
-
+                transition: 0.4s linear;
                 &:hover {
-                    background-color: $color-2;
+                    opacity: 0.5;
+                    text-shadow: $shadow-1;
                 }
             }
 
             .current {
-                box-shadow: unset;
-                font-weight: lighter;
+                
             }
         }
     }
