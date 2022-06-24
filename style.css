@@ -279,17 +279,18 @@ footer .footer-container {
   margin: 1.5rem 0;
 }
 
-.container.help .list-guide-container {
+.container.help ul.list-guide-container {
   counter-reset: counter;
   display: inherit;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: inherit;
           flex-flow: inherit;
-  margin: 0 10%;
+  list-style: none;
+  margin: 0 20%;
 }
 
-.container.help .list-guide-container .guide-item-container {
+.container.help ul.list-guide-container li.guide-item-container {
   border-radius: 20px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
@@ -297,9 +298,49 @@ footer .footer-container {
   padding: 3rem;
   position: relative;
   text-align: center;
+  -webkit-transition: opacity 0.5s linear, height 0.5s step-start;
+  transition: opacity 0.5s linear, height 0.5s step-start;
 }
 
-.container.help .list-guide-container .guide-item-container .number {
+.container.help ul.list-guide-container li.guide-item-container .options-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container.help ul.list-guide-container li.guide-item-container .options-container .option {
+  border: 1px solid #F9C5D5;
+  cursor: pointer;
+  margin: 0 0.25rem;
+  padding: 0.5rem 1rem;
+}
+
+.container.help ul.list-guide-container li.guide-item-container .options-container .option:hover {
+  border-color: #F999B7;
+}
+
+.container.help ul.list-guide-container li.guide-item-container .options-container .no-option {
+  border-radius: 10px 0 0 10px;
+}
+
+.container.help ul.list-guide-container li.guide-item-container .options-container .yes-option {
+  border-radius: 0 10px 10px 0;
+}
+
+.container.help ul.list-guide-container li.guide-item-container .options-container .current-option {
+  background-color: #F9C5D5;
+  border-color: #F999B7;
+}
+
+.container.help ul.list-guide-container li.guide-item-container .number,
+.container.help ul.list-guide-container li.guide-item-container .question-mark {
   background-color: #F9C5D5;
   border-radius: 100px;
   font-size: 2.75rem;
@@ -312,31 +353,41 @@ footer .footer-container {
   width: 90px;
 }
 
-.container.help .list-guide-container .guide-item-container .number::after {
+.container.help ul.list-guide-container li.guide-item-container .number::after {
   content: counter(counter);
   counter-increment: counter;
 }
 
-.container.help .list-guide-container .guide-item-container .guide-title {
+.container.help ul.list-guide-container li.guide-item-container .guide-title {
   font-size: 2rem;
 }
 
-.container.help .list-guide-container .guide-item-container .guide-content {
+.container.help ul.list-guide-container li.guide-item-container .guide-content {
   font-size: 1.5rem;
   font-weight: lighter;
 }
 
-.container.help .list-guide-container .guide-item-container .guide-image {
+.container.help ul.list-guide-container li.guide-item-container .guide-image {
   border-radius: 10px;
 }
 
-.container.help .list-guide-container .guide-item-container .guide-image img {
+.container.help ul.list-guide-container li.guide-item-container .guide-image img {
   border-radius: 10px;
   max-width: 100%;
 }
 
-.container.help .list-guide-container .guide-item-container .content {
+.container.help ul.list-guide-container li.guide-item-container .content {
   margin: 1.5rem 0;
+}
+
+.container.help ul.list-guide-container .animation-hidden {
+  height: 0;
+  margin: 0 !important;
+  opacity: 0;
+  padding: 0 !important;
+  -webkit-transition-timing-function: linear, step-end;
+          transition-timing-function: linear, step-end;
+  visibility: hidden;
 }
 
 .container.about {

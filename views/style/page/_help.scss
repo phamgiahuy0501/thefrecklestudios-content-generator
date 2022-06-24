@@ -2,7 +2,7 @@
     display: flex;
     flex-flow: column;
     margin-bottom: 4rem;
-        
+
     .title {
         font-size: 2.25rem;
         text-align: center;
@@ -13,21 +13,54 @@
         margin: 1.5rem 0;
     }
 
-    .list-guide-container {
+    ul.list-guide-container {
         counter-reset: counter;
         display: inherit;
         flex-flow: inherit;
-        margin: 0 10%;
+        list-style: none;
+        margin: 0 20%;
 
-        .guide-item-container {
+        li.guide-item-container {
             border-radius: 20px;
             box-shadow: $shadow-2;
             margin: 3rem 0;
             padding: 3rem;
             position: relative;
             text-align: center;
+            transition: opacity 0.5s linear, height 0.5s step-start;
 
-            .number {
+            .options-container {
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+
+                .option {
+                    border: 1px solid $color-1;
+                    cursor: pointer;
+                    margin: 0 0.25rem;
+                    padding: 0.5rem 1rem;
+
+                    &:hover {
+                        border-color: $color-2;
+                    }
+                }
+
+                .no-option {
+                    border-radius: 10px 0 0 10px;
+                }
+
+                .yes-option {
+                    border-radius: 0 10px 10px 0;
+                }
+
+                .current-option {
+                    background-color: $color-1;
+                    border-color: $color-2;
+                }
+            }
+
+            .number,
+            .question-mark {
                 background-color: $color-1;
                 border-radius: 100px;
                 font-size: 2.75rem;
@@ -38,10 +71,11 @@
                 position: absolute;
                 top: -20px;
                 width: 90px;
-                &::after {
-                    content: counter(counter);
-                    counter-increment: counter;
-                }
+            }
+
+            .number::after {
+                content: counter(counter);
+                counter-increment: counter;
             }
 
             .guide-title {
@@ -65,6 +99,15 @@
             .content {
                 margin: 1.5rem 0;
             }
+        }
+
+        .animation-hidden {
+            height: 0;
+            margin: 0 !important;
+            opacity: 0;
+            padding: 0 !important;
+            transition-timing-function: linear, step-end;
+            visibility: hidden;
         }
     }
 }
