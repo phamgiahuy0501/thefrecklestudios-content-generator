@@ -17,6 +17,10 @@ function innerDotComp() {
     return htmlCreator(new CompModel.InnerDotModel());
 }
 
+export function sectionWrapComp(content) {
+    return htmlCreator(new CompModel.WrapSectionModel(content))
+}
+
 export function globalWrapComp(content) {
     return htmlCreator(new CompModel.WrapStyleModel(htmlCreator(new CompModel.DescriptionContainerModel(content))));
 }

@@ -31,5 +31,8 @@ export function generate() {
         });
 
     });
-    return Comp.globalWrapComp(genElementList);
+    if (genElementList.length == 0) {
+        return;
+    }
+    return Comp.sectionWrapComp(Comp.globalWrapComp(genElementList));
 }

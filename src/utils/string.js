@@ -1,6 +1,7 @@
 export const HTML_TAG_STRING = {
     DIV: "div",
     HEADER_4: "h4",
+    P: "p",
     SPAN: "span"
 }
 

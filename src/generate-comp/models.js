@@ -15,6 +15,13 @@ export class ContentAnimModel extends ContentModel {
     }
 }
 
+export class WrapSectionModel {
+    constructor(content) {
+        this.tag = HTML_TAG_STRING.P;
+        this.content = content;
+    }
+}
+
 export class WrapStyleModel {
     constructor(content) {
         this.tag = HTML_TAG_STRING.DIV;
@@ -74,6 +81,6 @@ export class InnerDotModel {
     constructor() {
         this.tag = HTML_TAG_STRING.SPAN;
         this.content = STRING.DOT;
-    } 
+    }
 }
 
