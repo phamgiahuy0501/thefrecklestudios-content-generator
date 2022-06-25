@@ -1,5 +1,25 @@
 .container.about {
-    font-size: 2rem;
-    height: 100vh;
-    margin: 0 10%;
+    height: 80vh;
+    margin: 15rem 10% 0 10%;
+    .content-container {
+        margin: 3rem 0;
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        .content-item {
+            font-size: 1.25rem;
+            margin: 1rem 10% 1rem 1rem;
+            a {
+                color: $color-3;
+                text-decoration: none;
+                transition: opacity 0.4s linear;
+                &:hover {
+                    opacity: 0.5;
+                    text-shadow: $shadow-1;
+                }
+            }
+        }
+    }
 }

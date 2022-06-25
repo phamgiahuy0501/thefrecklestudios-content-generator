@@ -266,7 +266,7 @@ footer .footer-container {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  margin-bottom: 4rem;
+  margin-bottom: 35rem;
 }
 
 .container.help .title {
@@ -391,8 +391,34 @@ footer .footer-container {
 }
 
 .container.about {
+  height: 80vh;
+  margin: 15rem 10% 0 10%;
+}
+
+.container.about .content-container {
+  margin: 3rem 0;
+}
+
+.container.about .content-container .title {
   font-size: 2rem;
-  height: 100vh;
-  margin: 0 10%;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.container.about .content-container .content-item {
+  font-size: 1.25rem;
+  margin: 1rem 10% 1rem 1rem;
+}
+
+.container.about .content-container .content-item a {
+  color: #F2789F;
+  text-decoration: none;
+  -webkit-transition: opacity 0.4s linear;
+  transition: opacity 0.4s linear;
+}
+
+.container.about .content-container .content-item a:hover {
+  opacity: 0.5;
+  text-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 /*# sourceMappingURL=style.css.map */
